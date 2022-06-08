@@ -3,7 +3,7 @@
 # Version 2.0
 
 # Default Values
-fileCount=100
+fileCount=1000
 rowCount=1000
 fileX="csv"
 
@@ -54,8 +54,8 @@ while getopts ":c:x:r:h" opt; do
             fileXStatement() { printf "\\n%b" "Each file will use a ${BGREEN}$fileX ${NC}file extension (${GREEN}CUSTOM${NC})" ;}
             ;;
         h)
-            echo -e "\nusage dlpTest.sh -c <number of files to create per extension type> -r <number of rows per file> -x <alternate file extension to use instead of \".csv\">"
-            echo -e "e.g. dlpTest.sh -c 100 -r 1000 -x rtf (will create 100 \".rtf\" files, each with 1000 rows of data)\n"
+            echo -e "\nusage dlpTest.sh -c <number of files to create> -r <number of rows per file> -x <alternate file extension to use instead of \".csv\">"
+            echo -e "e.g. dlpTest.sh -c 100 -r 700 -x rtf (will create 100 \".rtf\" files, each with 700 rows of data)\n"
             exit 0
             ;;
         \?)
